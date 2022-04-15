@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0.28
+    tty: true
+    environment:
+      TZ: Asia/Tokyo
+      LANG: en_US.UTF-8
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: redmine
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql:/var/lib/mysql
+  redmine:
+    image: redmine:5.0.0
+    tty: true
+    environment:
+      TZ: Asia/Tokyo
+      LANG: en_US.UTF-8
+      REDMINE_DB_MYSQL: mysql
+      REDMINE_DB_DATABASE: redmine
+      REDMINE_DB_USERNAME: root
+      REDMINE_DB_PASSWORD: password
+    ports:
+      - "80:3000"
+    volumes:
+      - ./files:/usr/src/redmine/files
+      - ./plugins:/usr/src/redmine/plugins
+    depends_on:
+      - mysql
+
+volumes:
+  mysql:
