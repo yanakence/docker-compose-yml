@@ -24,7 +24,7 @@ multi-db-db2-1  | xxxx-xx-xx xx:xx:xx+xx:xx [Note] [Entrypoint]: GENERATED ROOT 
 
 ### Adding or changing databases
 
-[docker-compose.yml](./blob/main/multi-db/docker-compose.yml)の MySQL コンテナを編集した場合、合わせて[config/phpmyadmin/config.user.inc.php](./blob/main/multi-db/config/phpmyadmin/config.user.inc.php)も修正しなければ phpMyAdmin が正常に動作しない場合があります。
+[docker-compose.yml](../../../blob/main/multi-db/docker-compose.yml)の MySQL コンテナを編集した場合、合わせて[config/phpmyadmin/config.user.inc.php](../../../blob/main/multi-db/config/phpmyadmin/config.user.inc.php)も修正しなければ phpMyAdmin が正常に動作しない場合があります。
 
 ## Images
 
