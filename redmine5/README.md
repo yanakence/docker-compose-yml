@@ -2,7 +2,7 @@
 
 ## Get started
 
-同時に立ち上げると MySQL の立ち上がりが遅いため、Redmine がコネクションエラーとなります。
+同時に立ち上げると MySQL の立ち上がりが遅いため、**初回のみ Redmine がコネクションエラー**となります。
 
 ```
 $ docker compose up -d mysql
