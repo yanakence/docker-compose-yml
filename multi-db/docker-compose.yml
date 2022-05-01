@@ -11,7 +11,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - db1:/var/lib/mysql
+      - ./data/db1/:/var/lib/mysql/
   db2:
     image: mysql:8.0.28
     tty: true
@@ -22,7 +22,7 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - db2:/var/lib/mysql
+      - ./data/db2/:/var/lib/mysql/
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     tty: true
@@ -36,7 +36,3 @@ services:
     depends_on:
       - db1
       - db2
-
-volumes:
-  db1:
-  db2:
