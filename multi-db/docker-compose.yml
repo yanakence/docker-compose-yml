@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   db1:
-    image: mysql:5.7.37
+    image: mysql:5.7.38
     tty: true
     environment:
       TZ: Asia/Tokyo
@@ -13,7 +13,7 @@ services:
     volumes:
       - ./data/db1/:/var/lib/mysql/
   db2:
-    image: mysql:8.0.28
+    image: mysql:8.0.29
     tty: true
     environment:
       TZ: Asia/Tokyo
