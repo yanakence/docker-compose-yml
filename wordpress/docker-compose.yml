@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0.29
+    tty: true
+    environment:
+      TZ: Asia/Tokyo
+      LANG: en_US.UTF-8
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql:/var/lib/mysql/
+  wordpress:
+    image: wordpress:latest
+    tty: true
+    environment:
+      TZ: Asia/Tokyo
+      LANG: en_US.UTF-8
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: wordpress
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/var/www/html
+
+volumes:
+  mysql:
