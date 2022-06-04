@@ -6,6 +6,6 @@
 $ docker compose up -d
 ```
 
-## How to Access
+## How to Use
 
 http://localhost:8080
