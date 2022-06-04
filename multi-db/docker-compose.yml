@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   db1:
-    image: mysql:5.7.38
+    image: mysql:5.7
     tty: true
     environment:
       TZ: Asia/Tokyo
@@ -14,7 +14,7 @@ services:
       - ./data/db1/:/var/lib/mysql/
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
   db2:
-    image: mysql:8.0.29
+    image: mysql:8.0
     tty: true
     environment:
       TZ: Asia/Tokyo
