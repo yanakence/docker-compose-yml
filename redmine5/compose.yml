@@ -1,6 +1,6 @@
 services:
   mysql:
-    image: mysql:8.0
+    image: mysql:latest
     tty: true
     environment:
       TZ: Asia/Tokyo
@@ -13,7 +13,7 @@ services:
       - mysql:/var/lib/mysql
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
   redmine:
-    image: redmine:5.0
+    image: redmine:latest
     tty: true
     environment:
       TZ: Asia/Tokyo

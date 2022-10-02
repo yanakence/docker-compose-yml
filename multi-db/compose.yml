@@ -24,7 +24,7 @@ services:
       - ./data/db2/:/var/lib/mysql/
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin:latest
     tty: true
     environment:
       TZ: Asia/Tokyo
