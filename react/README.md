@@ -3,7 +3,7 @@
 ## "Create React App"でプロジェクト作成
 
 ```bash
-$ docker compose run app --rm --no-deps npx create-react-app my-app # npx
-$ docker compose run app --rm --no-deps npm init react-app my-app # npm
-$ docker compose run app --rm --no-deps yarn create react-app my-app # yarn
+$ docker compose run --rm --no-deps app npx create-react-app my-app # npx
+$ docker compose run --rm --no-deps app npm init react-app my-app # npm
+$ docker compose run --rm --no-deps app yarn create react-app my-app # yarn
 ```
