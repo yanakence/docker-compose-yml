@@ -1,4 +1,4 @@
-# redmine5
+# redmine
 
 ## Get started
 
